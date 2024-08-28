@@ -5,8 +5,7 @@ description: Home Page
 hide: true
 ---
 
-
-###Markdown samples.[markdown cheatsheet] https://www.markdownguide.org/getting-started/
+### Markdown samples.[markdown cheatsheet](https://www.markdownguide.org/getting-started/)
 Using markdown form index.md. We are learning markdwon
 
 
