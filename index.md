@@ -159,7 +159,7 @@ index.md
         img.src = http_source + location.flag; // concatenate the source and flag
         img.alt = location.flag + " Flag"; // add alt text for accessibility
 
-        // Add "p" HTML tag for the description
+        // Add "p" HTML tag for the descriptios
         var description = document.createElement("p");
         description.textContent = location.description; // extract the description
 
@@ -171,6 +171,7 @@ index.md
         gridItem.appendChild(img);
         gridItem.appendChild(description);
         gridItem.appendChild(greeting);
+     
 
         // Append the grid item DIV to the container DIV
         container.appendChild(gridItem);
@@ -178,3 +179,8 @@ index.md
 </script>
 
 Classroom work time is 3-4 hours per week. Homework expectations are approximately 2-3 hours per week.  Homework is scheduled over a Sprint, approximately 2-4 weeks.  Time lost is extremely hard to make up as all materials are cummulative.
+
+
+New Kasm Test 
+
+My journey starts here - Kickin' Projects 2.3
