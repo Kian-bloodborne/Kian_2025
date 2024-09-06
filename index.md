@@ -8,8 +8,8 @@ hide: true
 ---
 
 ### Markdown samples. 
+markdown cheatsheet
 ```
-[markdown cheatsheet]
 https://www.markdownguide.org/getting-started/
 ```
 This text below is something called Marked.This is a heading, inside of code scaffolding.
