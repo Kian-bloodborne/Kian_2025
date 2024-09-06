@@ -7,7 +7,7 @@ image: /images/mario_animation.png
 hide: true
 ---
 
-### Markdown samples.[markdown cheatsheet]  (https://www.markdownguide.org/getting-started/)
+### Markdown samples. [markdown cheatsheet]  "https://www.markdownguide.org/getting-started/"
 This text below is something called Marked.This is a heading, inside of code scaffolding.
 Using markdown form index.md. We are learning markdwon
 
