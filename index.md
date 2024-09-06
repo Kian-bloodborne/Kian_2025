@@ -5,33 +5,6 @@ description: Home Page
 hide: true
 ---
 
-### Markdown samples.[markdown cheatsheet](https://www.markdownguide.org/getting-started/)
-Using markdown form index.md. We are learning markdwon
-
-
--This text below is something called Marked.This is a heading, inside of code scaffolding.
-
-```markdown
-##Investing in Your Tecnical Future
-```
--This is emphasis
-
-```markdown
-> Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. 
- All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.
-
--Sample of bullets
-
-```bullets
-- Introduction to concepts and requirements by the teacher
-- Project-based learning with teacher support, performing Agile/Scrum development
-- Coding, frontend, backend, devops, version control and algorithmic thinking
-- Creativity, research, design, data structures, and utilizing ChatGPT
-- Performing team work, team communication and collaboration, peer reviews/grading
-- Focus on tehnical communications through project presentations and student led teaching
-- Grades are on projects, learnt concepts, and live reviews between student(s) and teacher
-```
-
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -69,7 +42,6 @@ Using markdown form index.md. We are learning markdwon
 </style>
 
 <!--- Embedded executable code--->
-
 <script>
   ////////// convert YML hash to javascript key:value objects /////////
 
@@ -85,7 +57,7 @@ Using markdown form index.md. We are learning markdwon
 
   {% endfor %}
 
-////////// game object for player /////////
+  ////////// game object for player /////////
 
   class Mario {
     constructor(meta_data) {
@@ -216,4 +188,3 @@ Using markdown form index.md. We are learning markdwon
   });
 
 </script>
-
