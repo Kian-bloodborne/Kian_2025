@@ -223,3 +223,20 @@ Classroom work time is 3-4 hours per week. Homework expectations are approximate
   });
 
 </script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8>
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>snake game</title
+<style>
+</head>
+canvas { border: 1px solid black; }
+</style>
+</head>
+<body>
+       <canvas id="gameCanvas" width="400" height="400"></canvas>canvas>
+       <script src="snake.js"></script>
+</body>
+</html>
