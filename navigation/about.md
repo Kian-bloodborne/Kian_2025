@@ -122,3 +122,4 @@ Gallery of Pics, scroll to the right for more ...
   <img src="{{site.baseurl}}/images/about me/INSERT_HERE" alt="Image 12">
 </div>
 
+{% include utterances.html %}
