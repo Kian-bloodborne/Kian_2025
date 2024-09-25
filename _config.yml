@@ -5,7 +5,8 @@ github_username: Kian-bloodborne
 github_repo: "Kian_2025" 
 baseurl: "/Kian_2025"
 future: true
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
+remote_theme: pages-themes/cayman@v0.2.0
 minima:
   skin: dark
   social_links:
