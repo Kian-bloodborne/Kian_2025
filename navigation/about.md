@@ -9,7 +9,7 @@ permalink: /about/
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta Kian="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
         body {
@@ -39,21 +39,21 @@ permalink: /about/
 
 <div class="container">
     <h1>About Me</h1>
-    <img src="your-photo-url.jpg" alt="Your Name">
-    <p>Hello! I'm [Your Name], a [Your Profession or Role]. I enjoy [Your Interests or Hobbies].</p>
+    <img src="your-photo-url.jpg" alt="Your name">
+    <p>Hello! I'm [Kian], from [China]. I enjoy [viedo games, I have 280 games in Steam. Such as csgo rainbowsix, elden ring, dark souls1, 2, 3 and league of leagands].</p>
     
     <h2>Background</h2>
-    <p>I have a background in [Your Education/Experience]. Over the years, I have worked on various projects related to [Your Areas of Expertise].</p>
+    <p>I born in San Diego grow up in China [].</p>
     
     <h2>Skills</h2>
     <ul>
-        <li>Skill 1</li>
-        <li>Skill 2</li>
-        <li>Skill 3</li>
+        <li>Skill 1. I play soccuer</li>
+        <li>Skill 2. I'm good at viedo games</li>
+        <li>Skill 3. I can draw</li>
     </ul>
     
     <h2>Contact</h2>
-    <p>If you’d like to get in touch, feel free to reach out to me at [Your Email] or connect with me on [Your Social Media].</p>
+    <p>If you’d like to get in touch, feel free to reach out to me at [kian1yong2@gmail.com] or connect with me on [].</p>
 </div>
 
 </body>
