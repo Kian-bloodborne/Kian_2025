@@ -14,6 +14,10 @@ title: Welcome to My Site
 description: A brief introduction to my project.
 ---
 
+#What I want to do 
+
+I'm trying to add background music, and add the speed control. Use shift buttom to let carcter run.
+
 # Welcome to My Site
 
 Hello! This is the homepage of my project. Here, you can find various resources and information about what I’m working on.
