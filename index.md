@@ -16,9 +16,15 @@ description: A brief introduction to my project.
 
 #What I want to do 
 
-1.I'm trying to add background music it called 'bloodborne Ludwig the holy blade', and add the speed control. Use shift buttom to let carcter run.
+1.I'm trying to add background music it called 'bloodborne Ludwig the holy blade', and add the speed control. Use shift button to let character run.
 
-2.I want add a carcter2, and let it control by the jkil. And this is his image ![image](https://github.com/user-attachments/assets/78af2afb-ceed-4ebf-a65c-1a2b4cc1ad6f)
+2.I want add a character2, and let it control by the jkil. And this is his image ![image](https://github.com/user-attachments/assets/78af2afb-ceed-4ebf-a65c-1a2b4cc1ad6f)
+
+3.I try to add attack button to let character to attack, one use klee weapons one use gun.
+
+4.I want add some enemies and they also can attack.
+
+5.I want to add items fall off, if the character kill the enemies they can get some items to resume HP or increase the damage of the character.
 
 
 # Welcome to My Site
