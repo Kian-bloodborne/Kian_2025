@@ -16,7 +16,10 @@ description: A brief introduction to my project.
 
 #What I want to do 
 
-I'm trying to add background music, and add the speed control. Use shift buttom to let carcter run.
+1.I'm trying to add background music, and add the speed control. Use shift buttom to let carcter run.
+
+2.I want add a carcter2, and let it control by the jkil. And this is his image ![image](https://github.com/user-attachments/assets/78af2afb-ceed-4ebf-a65c-1a2b4cc1ad6f)
+
 
 # Welcome to My Site
 
