@@ -26,7 +26,9 @@ description: A brief introduction to my project.
 
 5.I want to add items fall off, if the character kill the enemies they can get some items to resume HP or increase the damage of the character.
 
-6.RPG game must be random so I want add some treasure box let character open it may have weapon and money inside, I also want to add treasure chest monster.![image](https://github.com/user-attachments/assets/dcea74e1-1dde-40b5-8a06-0bc33b4aa349)
+6.I want add some envirment like snow or rain, may be the harmful one.
+
+7..RPG game must be random so I want add some treasure box let character open it may have weapon and money inside, I also want to add treasure chest monster.![image](https://github.com/user-attachments/assets/dcea74e1-1dde-40b5-8a06-0bc33b4aa349)
  
 
 
