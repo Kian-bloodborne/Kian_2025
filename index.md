@@ -31,6 +31,8 @@ description: A brief introduction to my project.
 7..RPG game must be random so I want add some treasure box let character open it may have weapon and money inside, I also want to add treasure chest monster.![image](https://github.com/user-attachments/assets/dcea74e1-1dde-40b5-8a06-0bc33b4aa349)
  
 
+![image](https://github.com/user-attachments/assets/e44c3314-0868-472b-a852-1f697b3c3b66)
+
 
 # Welcome to My Site
 
