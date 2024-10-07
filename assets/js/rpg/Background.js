@@ -32,11 +32,3 @@ export class Background {
 
 export default Background;
 
-import pygame
-import sys
-
-pygame.init()
-screen = pygame.display.set_mode((800, 600))
-pygame.mixer.music.load('bloodborne_ludwig.mp3')
-pygame.mixer.music.play(-1)  # Loop indefinitely
-
