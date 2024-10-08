@@ -32,3 +32,7 @@ export class Background {
 
 export default Background;
 
+<audio controls loop>
+    <source src="your-music-file.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
