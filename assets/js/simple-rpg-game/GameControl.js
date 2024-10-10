@@ -10,16 +10,14 @@ const gameAssets = new GameAssets();
 const assets = gameAssets.getAssets();
 const player = new Player(assets.sprite);
 
+const background = new Image();
+background.src = assets.image.src;
+
+// Draw background and player in the game loop
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // Draw background
-    const background = new Image();
-    background.src = assets.image.src;
-    background.onload = () => {
-        ctx.drawImage(background, 0, 0, assets.image.data.pixels.width, assets.image.data.pixels.height);
-        // Draw player
-        player.draw(ctx);
-    };
+    ctx.drawImage(background, 0, 0, assets.image.data.pixels.width, assets.image.data.pixels.height);
+    player.draw(ctx);
 }
 
 document.addEventListener('keydown', (event) => {
@@ -36,5 +34,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// Start the game loop
-gameLoop();
+// Start the game loop after the background is loaded
+background.onload = () => {
+    gameLoop();
+};
