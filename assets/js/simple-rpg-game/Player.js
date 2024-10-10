@@ -26,7 +26,13 @@ export default class Player {
         const img = new Image();
         img.src = src;
         img.onload = () => {
-            ctx.drawImage(img, this.position.x, this.position.y, data.pixels.width * data.SCALE_FACTOR, data.pixels.height * data.SCALE_FACTOR);
+            ctx.drawImage(
+                img,
+                this.position.x,
+                this.position.y,
+                data.pixels.width * data.SCALE_FACTOR,
+                data.pixels.height * data.SCALE_FACTOR
+            );
         };
     }
 }
