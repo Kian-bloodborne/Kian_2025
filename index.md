@@ -73,17 +73,48 @@ Feel free to reach out if you have any questions or suggestions!
 
 Thank you for visiting my site!
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple RPG Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <canvas id="gameCanvas"></canvas>
-    <script type="module" src="assets/js/GameControl.js"></script>
-</body>
-</html>
 ---
+layout: base
+title: Simple RPG Game
+permalink: /rpg/
+---
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/rpg/">RPG Game</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+    </ul>
+</nav>
+
+<canvas id='gameCanvas'></canvas>
+
+<script type="module" src="assets/js/GameControl.js"></script>
+
+<style>
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+</style>
