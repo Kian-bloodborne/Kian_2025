@@ -181,7 +181,7 @@ Make a code cell that changes block into a square, versus HD resolution
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scaling Blocks</title>
+    <title>Scaling Block</title>
     <style>
         body {
             background-color: blue; /* Set the background color of the body */
@@ -191,17 +191,21 @@ Make a code cell that changes block into a square, versus HD resolution
         }
         #container {
             position: relative;
-            margin: 0 auto;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
             overflow: hidden; /* Ensure no overflow */
         }
         #block {
             position: absolute;
             background-color: red;
+            left: 50%; /* Center horizontally */
+            top: 50%; /* Center vertically */
+            transform: translate(-50%, -50%); /* Adjust for block size */
         }
     </style>
 </head>
 <body>
-    <p>This example uses data types, operators, and functions to scale blocks based on a user-defined width.</p>
+    <p>This example uses data types, operators, and functions to scale a block based on a user-defined width.</p>
 
     <!-- Input definitions -->
     <div>
@@ -215,12 +219,8 @@ Make a code cell that changes block into a square, versus HD resolution
     <div id="error"></div>
 
     <!-- Block display -->
-    <div id="container" style="width: 100%; height: 100vh; position: relative;">
+    <div id="container">
         <div id="block" style="width: 0px; height: 0px;"></div>
-        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; top: 0; left: 0;"></div>
-        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; top: 0; right: 0;"></div>
-        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; bottom: 0; left: 0;"></div>
-        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; bottom: 0; right: 0;"></div>
     </div>
 
     <script>
