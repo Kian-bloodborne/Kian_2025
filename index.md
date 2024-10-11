@@ -126,91 +126,60 @@ nav a:hover {
 Popcorn Hack 1
 Make a code cell that show usage of compound assignment in a Data Type Operations.
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scaling Block</title>
-    <style>
-        body {
-            background-color: blue; /* Set the background color of the body */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        #container {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-            overflow: hidden; /* Ensure no overflow */
-        }
-        #block {
-            position: absolute;
-            background-color: red;
-            left: 50%; /* Center horizontally */
-            top: 50%; /* Center vertically */
-            transform: translate(-50%, -50%); /* Adjust for block size */
-        }
-    </style>
-</head>
-<body>
-    <p>This example uses data types, operators, and functions to scale a block based on a user-defined width.</p>
+// Primitive Data Types
+let health = 100; // Integer
+let playerSpeed = 5.75; // Float
 
-    <!-- Input definitions -->
-    <div>
-        <label for="width">Enter Width (1280, 1920, 2560, 3840):</label>
-        <input type="number" id="width" name="width" min="1280" max="3840" step="640" value="1280">
-        <button onclick="submitScale()">Submit</button>
-    </div>
+console.log("Health (Number):", health, "Type:", typeof health);
+console.log("Player Speed (Number):", playerSpeed, "Type:", typeof playerSpeed);
 
-    <!-- Document Object Model (DOM) output locations -->
-    <div id="output"></div>
-    <div id="error"></div>
+let userName = "Hero123"; // String
+let keyPress = 'a'; // Single character
 
-    <!-- Block display -->
-    <div id="container">
-        <div id="block" style="width: 0px; height: 0px;"></div>
-    </div>
+console.log("User Name (String):", userName, "Type:", typeof userName);
+console.log("Key Press (String):", keyPress, "Type:", typeof keyPress);
 
-    <script>
-        // Function to validate and output the scale value
-        function submitScale() {
-            const BLOCK_SCALE_DIVISOR = 20;
-            const ASPECT_RATIO = 9 / 16;
-            let block = document.getElementById('block');
-            let width = parseInt(document.getElementById('width').value);
-            
-            // Restrict sizes to common HD resolutions
-            if (width === 1280 || width === 1920 || width === 2560 || width === 3840) {
-                // Calculate height based on 16:9 aspect ratio
-                let height = Math.round(width * ASPECT_RATIO);
-                
-                // Calculate block size as 1/20th of the scale dimensions
-                let blockSize = Math.min(width, height) / BLOCK_SCALE_DIVISOR;
+let asciiValue = keyPress.charCodeAt(0);
+console.log("ASCII Value of Key Press:", asciiValue, "Type:", typeof asciiValue);
+console.log("Is Key Press 'a' (ASCII 97)?", asciiValue === 97);
 
-                // Set/clear error messages when the value is valid
-                document.getElementById('error').innerHTML = "";
-                document.getElementById('output').innerHTML = "Scale set to: " + width + " x " + height + " (Block size: " + blockSize + "px)";
-                
-                // Adjust the size of the block
-                block.style.width = blockSize + "px";
-                block.style.height = (blockSize * ASPECT_RATIO) + "px";
-                
-            } else {
-                // Set/clear output messages when there is an error
-                document.getElementById('output').innerHTML = "";
-                document.getElementById('error').innerHTML = "Invalid HD resolution: " + width;
+let isAlive = true; // Boolean
+console.log("Is Alive (Boolean):", isAlive, "Type:", typeof isAlive);
 
-                // Clear the block size
-                block.style.width = "0px";
-                block.style.height = "0px";
-            }
-            console.error("HD resolution:", block.style.width, "x", block.style.height);
-        }
-    </script>
-</body>
-</html>
+let questReward; // Undefined
+console.log("Quest Reward (Undefined):", questReward, "Type:", typeof questReward);
+
+let inventorySlot = null; // Null
+console.log("Inventory Slot (Null):", inventorySlot, "Type:", typeof inventorySlot);
+
+let uniqueID = Symbol('playerID'); // Symbol
+console.log("Unique ID (Symbol):", uniqueID, "Type:", typeof uniqueID);
+
+let totalTimePlayed = 1234567890123456789012345678901234567890n; // BigInt
+console.log("Total Time Played (BigInt):", totalTimePlayed, "Type:", typeof totalTimePlayed);
+
+// Reference Data Types
+let playerAttributes = { // Object
+  name: "Hero123",
+  health: 100,
+  mana: 50
+};
+
+console.log("Player Attributes (Object):", playerAttributes, "Type:", typeof playerAttributes);
+
+let highScores = [1500, 1200, 900, 600, 300]; // Array
+console.log("High Scores (Array):", highScores, "Type:", typeof highScores);
+
+// Function: Calculate total health after damage
+function calculateHealthAfterDamage(currentHealth, damage) {
+  return currentHealth - damage;
+}
+
+// Using the function
+let damageTaken = 20;
+let remainingHealth = calculateHealthAfterDamage(health, damageTaken);
+console.log("Remaining Health after taking", damageTaken, "damage:", remainingHealth);
+
 
 
 
