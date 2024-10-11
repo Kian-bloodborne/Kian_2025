@@ -157,6 +157,8 @@ console.log("\nInitial myString:", myString);
 myString += " World!"; // equivalent to myString = myString + " World!"
 console.log("After myString += ' World!':", myString);
 
+
+
 Popcorn Hack 2
 Make a code cell that changes block into a square, versus HD resolution
 <!DOCTYPE html>
