@@ -214,7 +214,7 @@ Make a code cell that changes block into a square, versus HD resolution
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scaling Block</title>
+    <title>Scaling Square Block</title>
     <style>
         body {
             background-color: blue; /* Set the background color of the body */
@@ -238,7 +238,7 @@ Make a code cell that changes block into a square, versus HD resolution
     </style>
 </head>
 <body>
-    <p>This example uses data types, operators, and functions to scale a block based on a user-defined width.</p>
+    <p>This example uses data types, operators, and functions to scale a square block based on a user-defined width.</p>
 
     <!-- Input definitions -->
     <div>
@@ -260,25 +260,21 @@ Make a code cell that changes block into a square, versus HD resolution
         // Function to validate and output the scale value
         function submitScale() {
             const BLOCK_SCALE_DIVISOR = 20;
-            const ASPECT_RATIO = 9 / 16;
             let block = document.getElementById('block');
             let width = parseInt(document.getElementById('width').value);
             
             // Restrict sizes to common HD resolutions
             if (width === 1280 || width === 1920 || width === 2560 || width === 3840) {
-                // Calculate height based on 16:9 aspect ratio
-                let height = Math.round(width * ASPECT_RATIO);
-                
-                // Calculate block size as 1/20th of the scale dimensions
-                let blockSize = Math.min(width, height) / BLOCK_SCALE_DIVISOR;
+                // Set the block size to be equal to the width
+                let blockSize = width / BLOCK_SCALE_DIVISOR;
 
                 // Set/clear error messages when the value is valid
                 document.getElementById('error').innerHTML = "";
-                document.getElementById('output').innerHTML = "Scale set to: " + width + " x " + height + " (Block size: " + blockSize + "px)";
+                document.getElementById('output').innerHTML = "Scale set to: " + width + " x " + width + " (Block size: " + blockSize + "px)";
                 
                 // Adjust the size of the block
                 block.style.width = blockSize + "px";
-                block.style.height = (blockSize * ASPECT_RATIO) + "px";
+                block.style.height = blockSize + "px"; // Make it square
                 
             } else {
                 // Set/clear output messages when there is an error
@@ -294,6 +290,7 @@ Make a code cell that changes block into a square, versus HD resolution
     </script>
 </body>
 </html>
+
 
 
 Popcorn Hack 3
