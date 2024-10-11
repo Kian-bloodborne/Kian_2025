@@ -126,50 +126,91 @@ nav a:hover {
 Popcorn Hack 1
 Make a code cell that show usage of compound assignment in a Data Type Operations.
 
-// Initial value for a score
-let score = 50;
-console.log("Initial Score:", score);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaling Block</title>
+    <style>
+        body {
+            background-color: blue; /* Set the background color of the body */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Ensure no overflow */
+        }
+        #block {
+            position: absolute;
+            background-color: red;
+            left: 50%; /* Center horizontally */
+            top: 50%; /* Center vertically */
+            transform: translate(-50%, -50%); /* Adjust for block size */
+        }
+    </style>
+</head>
+<body>
+    <p>This example uses data types, operators, and functions to scale a block based on a user-defined width.</p>
 
-// Using += (addition assignment)
-score += 10; // Equivalent to score = score + 10
-console.log("After += 10:", score);
+    <!-- Input definitions -->
+    <div>
+        <label for="width">Enter Width (1280, 1920, 2560, 3840):</label>
+        <input type="number" id="width" name="width" min="1280" max="3840" step="640" value="1280">
+        <button onclick="submitScale()">Submit</button>
+    </div>
 
-// Using -= (subtraction assignment)
-score -= 5; // Equivalent to score = score - 5
-console.log("After -= 5:", score);
+    <!-- Document Object Model (DOM) output locations -->
+    <div id="output"></div>
+    <div id="error"></div>
 
-// Using *= (multiplication assignment)
-score *= 2; // Equivalent to score = score * 2
-console.log("After *= 2:", score);
+    <!-- Block display -->
+    <div id="container">
+        <div id="block" style="width: 0px; height: 0px;"></div>
+    </div>
 
-// Using /= (division assignment)
-score /= 4; // Equivalent to score = score / 4
-console.log("After /= 4:", score);
+    <script>
+        // Function to validate and output the scale value
+        function submitScale() {
+            const BLOCK_SCALE_DIVISOR = 20;
+            const ASPECT_RATIO = 9 / 16;
+            let block = document.getElementById('block');
+            let width = parseInt(document.getElementById('width').value);
+            
+            // Restrict sizes to common HD resolutions
+            if (width === 1280 || width === 1920 || width === 2560 || width === 3840) {
+                // Calculate height based on 16:9 aspect ratio
+                let height = Math.round(width * ASPECT_RATIO);
+                
+                // Calculate block size as 1/20th of the scale dimensions
+                let blockSize = Math.min(width, height) / BLOCK_SCALE_DIVISOR;
 
-// Example with concatenation
-let playerName = "Hero";
-playerName += "123"; // Concatenation using +=
-console.log("Player Name after concatenation:", playerName);
+                // Set/clear error messages when the value is valid
+                document.getElementById('error').innerHTML = "";
+                document.getElementById('output').innerHTML = "Scale set to: " + width + " x " + height + " (Block size: " + blockSize + "px)";
+                
+                // Adjust the size of the block
+                block.style.width = blockSize + "px";
+                block.style.height = (blockSize * ASPECT_RATIO) + "px";
+                
+            } else {
+                // Set/clear output messages when there is an error
+                document.getElementById('output').innerHTML = "";
+                document.getElementById('error').innerHTML = "Invalid HD resolution: " + width;
 
-// Example with block size calculations
-let blockSize = 50;
-let block = {
-    style: {
-        width: '0px',
-        height: '0px'
-    }
-};
-
-// Set block dimensions using compound assignment
-block.style.width = blockSize + "px"; // Simple assignment
-block.style.height = blockSize * 9 / 16 + "px"; // Using calculation
-console.log("Block size set to:", block.style.width, block.style.height);
-
-// Increase block size using compound assignment
-blockSize += 10; // Increase size
-block.style.width = blockSize + "px";
-block.style.height = blockSize * 9 / 16 + "px"; // Recalculate height
-console.log("New Block size:", block.style.width, block.style.height);
+                // Clear the block size
+                block.style.width = "0px";
+                block.style.height = "0px";
+            }
+            console.error("HD resolution:", block.style.width, "x", block.style.height);
+        }
+    </script>
+</body>
+</html>
 
 
 
