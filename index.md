@@ -166,10 +166,27 @@ Make a code cell that changes block into a square, versus HD resolution
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scale Block Example</title>
+    <title>Scaling Blocks</title>
+    <style>
+        body {
+            background-color: blue; /* Set the background color of the body */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        #container {
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden; /* Ensure no overflow */
+        }
+        #block {
+            position: absolute;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-    <p>This example uses data types, operators, and functions to scale a block based on a user-defined width.</p>
+    <p>This example uses data types, operators, and functions to scale blocks based on a user-defined width.</p>
 
     <!-- Input definitions -->
     <div>
@@ -183,7 +200,13 @@ Make a code cell that changes block into a square, versus HD resolution
     <div id="error"></div>
 
     <!-- Block display -->
-    <div id="block" style="width: 64px; height: 36px; background-color: red;"></div>
+    <div id="container" style="width: 100%; height: 100vh; position: relative;">
+        <div id="block" style="width: 0px; height: 0px;"></div>
+        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; top: 0; left: 0;"></div>
+        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; top: 0; right: 0;"></div>
+        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; bottom: 0; left: 0;"></div>
+        <div class="corner" style="width: 50px; height: 50px; background-color: red; position: absolute; bottom: 0; right: 0;"></div>
+    </div>
 
     <script>
         // Function to validate and output the scale value
@@ -200,19 +223,18 @@ Make a code cell that changes block into a square, versus HD resolution
                 
                 // Calculate block size as 1/20th of the scale dimensions
                 let blockSize = Math.min(width, height) / BLOCK_SCALE_DIVISOR;
-                
+
                 // Set/clear error messages when the value is valid
                 document.getElementById('error').innerHTML = "";
-                // Output the scale value
                 document.getElementById('output').innerHTML = "Scale set to: " + width + " x " + height + " (Block size: " + blockSize + "px)";
                 
                 // Adjust the size of the block
                 block.style.width = blockSize + "px";
                 block.style.height = (blockSize * ASPECT_RATIO) + "px";
+                
             } else {
                 // Set/clear output messages when there is an error
                 document.getElementById('output').innerHTML = "";
-                // Output an error message to the HTML page
                 document.getElementById('error').innerHTML = "Invalid HD resolution: " + width;
 
                 // Clear the block size
@@ -224,6 +246,7 @@ Make a code cell that changes block into a square, versus HD resolution
     </script>
 </body>
 </html>
+
 
 Popcorn Hack 3
 Try to place a square in every corner.
