@@ -232,10 +232,10 @@ Try to place a square in every corner.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scale Block on Canvas</title>
+    <title>Squares in Every Corner</title>
 </head>
 <body>
-    <p>This example uses data types, operators, and functions to scale a block based on a user-defined width.</p>
+    <p>This example uses data types, operators, and functions to scale blocks based on a user-defined width.</p>
 
     <!-- Input definitions -->
     <div>
@@ -269,7 +269,7 @@ Try to place a square in every corner.
                 // Set the canvas dimensions
                 canvas.width = width * SCALE_DOWN_FACTOR;
                 canvas.height = height * SCALE_DOWN_FACTOR;
-                
+
                 // Calculate block size as 1/20th of the scale dimensions
                 let blockSize = Math.min(width, height) / BLOCK_SCALE_DIVISOR;
 
@@ -277,24 +277,21 @@ Try to place a square in every corner.
                 document.getElementById('errorMsg').innerHTML = "";
                 document.getElementById('outputMsg').innerHTML = "Scale set to: " + width + " x " + height + " (Block size: " + blockSize + "px)";
                 
-                // Load background image
-                let imageBackground = new Image();
-                imageBackground.src = 'https://samayass.github.io/samayaCSA/images/background.png';
-                imageBackground.onload = function() {
-                    // Clear the canvas before drawing
-                    c.clearRect(0, 0, canvas.width, canvas.height);
-                    // Draw the background image on the canvas
-                    c.drawImage(imageBackground, 0, 0, canvas.width, canvas.height);
-                    
-                    // Draw the red block on the canvas
-                    c.fillStyle = 'red';
-                    c.fillRect((canvas.width - blockSize) / 2, (canvas.height - blockSize) / 2, blockSize, blockSize);
-                };
+                // Clear the canvas before drawing
+                c.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw squares in each corner
+                c.fillStyle = 'red';
+                c.fillRect(0, 0, blockSize, blockSize); // Top-left corner
+                c.fillRect(canvas.width - blockSize, 0, blockSize, blockSize); // Top-right corner
+                c.fillRect(0, canvas.height - blockSize, blockSize, blockSize); // Bottom-left corner
+                c.fillRect(canvas.width - blockSize, canvas.height - blockSize, blockSize, blockSize); // Bottom-right corner
+                
             } else {
                 // Set/clear output messages when there is an error
                 document.getElementById('outputMsg').innerHTML = "";
                 document.getElementById('errorMsg').innerHTML = "Invalid HD resolution: " + width;
-                
+
                 // Clear the canvas
                 c.clearRect(0, 0, canvas.width, canvas.height);
             }
@@ -302,4 +299,5 @@ Try to place a square in every corner.
     </script>
 </body>
 </html>
+
 
