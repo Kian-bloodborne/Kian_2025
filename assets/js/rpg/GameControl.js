@@ -63,8 +63,4 @@ window.addEventListener('resize', GameControl.resize.bind(GameControl));
 
 export default GameControl;
 
-GameControl.start({
-    image: { src: 'path/to/background-image.jpg' },
-    sprite: { src: 'path/to/player-sprite.png' },
-    music: 'path/to/background-music.mp3' // Add your music file here
-});
+
