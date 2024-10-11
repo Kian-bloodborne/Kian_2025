@@ -126,36 +126,51 @@ nav a:hover {
 Popcorn Hack 1
 Make a code cell that show usage of compound assignment in a Data Type Operations.
 
-// Compound Assignment with Number
-let x = 10;
-console.log("Initial x:", x);
+// Initial value for a score
+let score = 50;
+console.log("Initial Score:", score);
 
-// Using compound assignment for addition
-x += 5; // equivalent to x = x + 5
-console.log("After x += 5:", x);
+// Using += (addition assignment)
+score += 10; // Equivalent to score = score + 10
+console.log("After += 10:", score);
 
-// Using compound assignment for multiplication
-x *= 2; // equivalent to x = x * 2
-console.log("After x *= 2:", x);
+// Using -= (subtraction assignment)
+score -= 5; // Equivalent to score = score - 5
+console.log("After -= 5:", score);
 
+// Using *= (multiplication assignment)
+score *= 2; // Equivalent to score = score * 2
+console.log("After *= 2:", score);
 
-// Compound Assignment with Array
-let myArray = [1, 2, 3];
-console.log("\nInitial myArray:", myArray);
+// Using /= (division assignment)
+score /= 4; // Equivalent to score = score / 4
+console.log("After /= 4:", score);
 
-// Using compound assignment to concatenate arrays
-myArray += [4, 5]; // This won't work as expected; use .concat instead
-myArray = myArray.concat([4, 5]);
-console.log("After myArray.concat([4, 5]):", myArray);
+// Example with concatenation
+let playerName = "Hero";
+playerName += "123"; // Concatenation using +=
+console.log("Player Name after concatenation:", playerName);
 
+// Example with block size calculations
+let blockSize = 50;
+let block = {
+    style: {
+        width: '0px',
+        height: '0px'
+    }
+};
 
-// Compound Assignment with String
-let myString = "Hello";
-console.log("\nInitial myString:", myString);
+// Set block dimensions using compound assignment
+block.style.width = blockSize + "px"; // Simple assignment
+block.style.height = blockSize * 9 / 16 + "px"; // Using calculation
+console.log("Block size set to:", block.style.width, block.style.height);
 
-// Using compound assignment for string concatenation
-myString += " World!"; // equivalent to myString = myString + " World!"
-console.log("After myString += ' World!':", myString);
+// Increase block size using compound assignment
+blockSize += 10; // Increase size
+block.style.width = blockSize + "px";
+block.style.height = blockSize * 9 / 16 + "px"; // Recalculate height
+console.log("New Block size:", block.style.width, block.style.height);
+
 
 
 
