@@ -126,40 +126,62 @@ nav a:hover {
 Popcorn Hack 1
 Make a code cell that show usage of compound assignment in a Data Type Operations.
 
-// Primitive Data Types
+%%js
+
+/* Primitive Data Types
+These are data types that store a single value.
+*/
+
+// Number: Represents numerical values, such as health and speed
 let health = 100; // Integer
-let playerSpeed = 5.75; // Float
+let playerSpeed = 5.75; // Float representing the player's speed
 
 console.log("Health (Number):", health, "Type:", typeof health);
 console.log("Player Speed (Number):", playerSpeed, "Type:", typeof playerSpeed);
 
-let userName = "Hero123"; // String
-let keyPress = 'a'; // Single character
+// String: Represents text, such as the user's name or keypress
+let userName = "Hero123"; // User name
+let keyPress = 'a'; // Keypress
 
 console.log("User Name (String):", userName, "Type:", typeof userName);
 console.log("Key Press (String):", keyPress, "Type:", typeof keyPress);
 
+// Compare single character to its ASCII value
 let asciiValue = keyPress.charCodeAt(0);
 console.log("ASCII Value of Key Press:", asciiValue, "Type:", typeof asciiValue);
 console.log("Is Key Press 'a' (ASCII 97)?", asciiValue === 97);
 
-let isAlive = true; // Boolean
+// Boolean: Represents true/false values, such as isAlive
+let isAlive = true;
+
 console.log("Is Alive (Boolean):", isAlive, "Type:", typeof isAlive);
 
-let questReward; // Undefined
+// Undefined: Represents a variable that has been declared but not yet assigned a value
+let questReward;
+
 console.log("Quest Reward (Undefined):", questReward, "Type:", typeof questReward);
 
-let inventorySlot = null; // Null
+// Null: Represents the intentional absence of any object value, such as an empty inventory slot
+let inventorySlot = null;
+
 console.log("Inventory Slot (Null):", inventorySlot, "Type:", typeof inventorySlot);
 
-let uniqueID = Symbol('playerID'); // Symbol
+// Symbol: Represents a unique and immutable value, often used as unique identifiers for game objects
+let uniqueID = Symbol('playerID');
+
 console.log("Unique ID (Symbol):", uniqueID, "Type:", typeof uniqueID);
 
-let totalTimePlayed = 1234567890123456789012345678901234567890n; // BigInt
+// BigInt: Represents very large integers, such as the total time played in milliseconds
+let totalTimePlayed = 1234567890123456789012345678901234567890n;
+
 console.log("Total Time Played (BigInt):", totalTimePlayed, "Type:", typeof totalTimePlayed);
 
-// Reference Data Types
-let playerAttributes = { // Object
+/* Reference Data Types
+These are data types that store references to memory locations.
+*/
+
+// Object: Represents a collection of key-value pairs, such as player attributes or game settings
+let playerAttributes = {
   name: "Hero123",
   health: 100,
   mana: 50
@@ -167,18 +189,19 @@ let playerAttributes = { // Object
 
 console.log("Player Attributes (Object):", playerAttributes, "Type:", typeof playerAttributes);
 
-let highScores = [1500, 1200, 900, 600, 300]; // Array
+// Array: Represents an ordered collection of values, such as a list of high scores or inventory items
+let highScores = [1500, 1200, 900, 600, 300];
+
 console.log("High Scores (Array):", highScores, "Type:", typeof highScores);
 
-// Function: Calculate total health after damage
-function calculateHealthAfterDamage(currentHealth, damage) {
-  return currentHealth - damage;
+// Function: Represents a block of code designed to perform a specific task, such as attacking an enemy or saving the game
+function attackEnemy() {
+  console.log("Enemy attacked!");
 }
 
-// Using the function
-let damageTaken = 20;
-let remainingHealth = calculateHealthAfterDamage(health, damageTaken);
-console.log("Remaining Health after taking", damageTaken, "damage:", remainingHealth);
+console.log("Attack Enemy (Function):", attackEnemy, "Type:", typeof attackEnemy);
+attackEnemy();
+<IPython.core.display.Javascript object>
 
 
 
