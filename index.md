@@ -118,3 +118,85 @@ nav a:hover {
     text-decoration: underline;
 }
 </style>
+
+
+
+
+
+Popcorn Hack 1
+Make a code cell that show usage of compound assignment in a Data Type Operations.
+
+// Compound Assignment with Number
+let x = 10;
+console.log("Initial x:", x);
+
+// Using compound assignment for addition
+x += 5; // equivalent to x = x + 5
+console.log("After x += 5:", x);
+
+// Using compound assignment for multiplication
+x *= 2; // equivalent to x = x * 2
+console.log("After x *= 2:", x);
+
+
+// Compound Assignment with Array
+let myArray = [1, 2, 3];
+console.log("\nInitial myArray:", myArray);
+
+// Using compound assignment to concatenate arrays
+myArray += [4, 5]; // This won't work as expected; use .concat instead
+myArray = myArray.concat([4, 5]);
+console.log("After myArray.concat([4, 5]):", myArray);
+
+
+// Compound Assignment with String
+let myString = "Hello";
+console.log("\nInitial myString:", myString);
+
+// Using compound assignment for string concatenation
+myString += " World!"; // equivalent to myString = myString + " World!"
+console.log("After myString += ' World!':", myString);
+
+Popcorn Hack 2
+Make a code cell that changes block into a square, versus HD resolution
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block to Square</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .block {
+            width: 100px; /* initial block width */
+            height: 200px; /* initial block height */
+            background-color: #3498db;
+            transition: all 0.5s ease; /* smooth transition */
+        }
+        .square {
+            width: 200px; /* square width */
+            height: 200px; /* square height */
+            background-color: #e74c3c; /* change color when square */
+        }
+    </style>
+</head>
+<body>
+    <div class="block" id="block"></div>
+    <script>
+        const block = document.getElementById('block');
+        
+        // Change block to square on click
+        block.addEventListener('click', () => {
+            block.classList.toggle('square');
+        });
+    </script>
+</body>
+</html>
+
