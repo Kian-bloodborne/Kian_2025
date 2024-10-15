@@ -31,10 +31,10 @@ This blog contains my journey into Coding.
 > Coding starts with tools, explore these tools and procedures with a click.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/jm1021/john_2025">
+    <a href="https://github.com/Kian-bloodborne/Kian_2025.git">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
     </a>
-    <a href="https://jm1021.github.io/john_2025/">
+    <a href="https://github.com/Kian-bloodborne/Kian_2025.git">
         <img src="https://img.shields.io/badge/GitHub%20Pages-327FC7?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages">
     </a>
     <a href="https://kasm.nighthawkcodingsociety.com/">
