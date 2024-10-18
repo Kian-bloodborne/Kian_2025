@@ -6,7 +6,7 @@ image: /images/mario_animation.png
 hide: true
 ---
 
-## Home
+## Home Hello
 
 This blog contains my journey into Coding.
 
