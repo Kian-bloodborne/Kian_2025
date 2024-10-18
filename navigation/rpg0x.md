@@ -1,7 +1,7 @@
 ---
 layout: base
 title: RPG 0
-permalink: /rpg2x/
+permalink: /rpg0x/
 ---
 
 <style>
