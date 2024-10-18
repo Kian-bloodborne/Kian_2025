@@ -6,22 +6,6 @@ image: /images/mario_animation.png
 hide: true
 ---
 
-
-
----
-layout: default
-title: Welcome to My Site
-description: A brief introduction to my project.
----
-
-
----
-layout: base
-title: John Mortensen Home 
-description: Home Page
-hide: true
----
-
 ## Home
 
 This blog contains my journey into Coding.
