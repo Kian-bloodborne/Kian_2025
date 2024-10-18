@@ -33,9 +33,9 @@ class GameLevelWater {
         src: sprite_src_turtle,
         SCALE_FACTOR: TURTLE_SCALE_FACTOR,
         STEP_FACTOR: 1000,
-        ANIMATION_RATE: 500,
+        ANIMATION_RATE: 50,
         INIT_POSITION: { x: 0, y: height - (height/TURTLE_SCALE_FACTOR) }, 
-        pixels: {height: 280, width: 200},
+        pixels: {height: 280, width: 256},
         orientation: {rows: 4, columns: 3 },
         down: {row: 0, start: 0, columns: 3 },
         left: {row: 1, start: 0, columns: 3 },
@@ -44,9 +44,9 @@ class GameLevelWater {
     };
 
     // Player 2 sprite data (fish)
-    const sprite_src_fish = path + "/images/rpg/fishies.png";
+    const sprite_src_fish = path + "/images/rpg/Darksouls.png";
     const sprite_data_fish = {
-        name: 'fish',
+        name: 'Sun',
         src: sprite_src_fish,
         SCALE_FACTOR: 16,
         STEP_FACTOR: 400,
@@ -83,5 +83,6 @@ class GameLevelWater {
   }
 
 }
+
 
 export default GameLevelWater;
