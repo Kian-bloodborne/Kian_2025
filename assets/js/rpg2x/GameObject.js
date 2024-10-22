@@ -1,139 +1,85 @@
+// To build GameLevels, each contains GameObjects from below imports
 import GameEnv from './GameEnv.js';
-import Socket from './Multiplayer.js';
+import Background from './Background.js';
+import PlayerOne from './PlayerOne.js';
+import PlayerTwo from './PlayerTwo.js';
+import NpcFrog from './NpcFrog.js';
 
-class GameObject {
-    // container for all game objects in game
-    constructor(canvas, image, data) {
-        this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.x = 0;
-        this.y = 0;
-        this.frame = 0;
-        this.image = image;
-        this.width = image.width;  // from Image() width
-        this.height = image.height; // from Image() height
-        this.collisionWidth = 0;
-        this.collisionHeight = 0;
-        this.aspect_ratio = this.width / this.height;
-        this.collisionData = {};
-        this.hitbox = data?.hitbox || {};
-        // Add this object to the game object array so collision can be detected
-        // among other things
-        GameEnv.gameObjects.push(this); 
-    }
 
-    setX(x) {
-        if (x < 0) {
-            x = 0;
-        }
-        this.x = x;
-    }
+class GameLevelWater {
+  constructor(path) {
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
 
-    setY(y) {
-        if (y < GameEnv.top) {
-            y = GameEnv.top;
-        }
-        if (y > GameEnv.bottom) {
-            y = GameEnv.bottom;
-        }
-        this.y = y;
-    }
+    // Values dependent on GameEnv.create()
+    let width = GameEnv.innerWidth;
+    let height = GameEnv.innerHeight;
 
-    /* Destroy Game Object
-    * remove canvas element of object
-    * remove object from GameObject array
-    */
-    destroy() {
-        const index = GameEnv.gameObjects.indexOf(this);
-        if (index !== -1) {
-            // Remove the canvas from the DOM
-            this.canvas.parentNode.removeChild(this.canvas);
-            GameEnv.gameObjects.splice(index, 1);
-        }
-    }
-    
-    /* Default collision action is no action
-     * override when you extend for custom action
-    */
-    collisionAction(){
-        // no action
-    }
+    // Background data
+    const image_src_water = path + "/images/rpg/water.png";
+    const image_data_water = {
+        name: 'water',
+        src: image_src_water,
+        pixels: {height: 580, width: 1038}
+    };
 
-    /* Collision checks
-     * uses GameObject isCollision to detect hit
-     * calls collisionAction on hit
-    */
-    collisionChecks() {
-        for (var gameObj of GameEnv.gameObjects){
-            if (this != gameObj ) {
-                this.isCollision(gameObj);
-                if (this.collisionData.hit){
-                    this.collisionAction();
-                }
-            }
-        }
-    }
+    // Player 1 sprite data (turtle)
+    const TURTLE_SCALE_FACTOR = 10;
+    const sprite_src_turtle = path + "/images/rpg/turtle.png";
+    const sprite_data_turtle = {
+        name: 'turtle',
+        src: sprite_src_turtle,
+        SCALE_FACTOR: TURTLE_SCALE_FACTOR,
+        STEP_FACTOR: 1000,
+        ANIMATION_RATE: 50,
+        INIT_POSITION: { x: 0, y: height - (height/TURTLE_SCALE_FACTOR) }, 
+        pixels: {height: 280, width: 256},
+        orientation: {rows: 4, columns: 3 },
+        down: {row: 0, start: 0, columns: 3 },
+        left: {row: 1, start: 0, columns: 3 },
+        right: {row: 2, start: 0, columns: 3 },
+        up: {row: 3, start: 0, columns: 3 },
+    };
 
-    /* Collision detection method
-     * usage: if (player.isCollision(platform)) { // action }
-    */
-    isCollision(other) {
-        // Bounding rectangles from Canvas
-        const thisRect = this.canvas.getBoundingClientRect();
-        const otherRect = other.canvas.getBoundingClientRect();
-    
-        // Calculate center points of rectangles
-        const thisCenterX = (thisRect.left + thisRect.right) / 2;
-        const otherCenterX = (otherRect.left + otherRect.right) / 2;
+    // Player 2 sprite data (fish)
+    const sprite_src_fish = path + "/images/rpg/fishies.png";
+    const sprite_data_fish = {
+        name: 'fish',
+        src: sprite_src_fish,
+        SCALE_FACTOR: 16,
+        STEP_FACTOR: 400,
+        ANIMATION_RATE: 50,
+        pixels: {height: 256, width: 384},
+        INIT_POSITION: { x: 0, y: 0 },
+        orientation: {rows: 8, columns: 12 },
+        down: {row: 0, start: 0, columns: 3 },  // 1st row
+        left: {row: 1, start: 0, columns: 3 },  // 2nd row
+        right: {row: 2, start: 0, columns: 3 }, // 3rd row
+        up: {row: 3, start: 0, columns: 3 },    // 4th row
+    };
 
-        // Calculate new center points of rectangles
-        const thisRectWidth = thisRect.right - thisRect.left;
-        const thisRectLeftNew = otherCenterX - thisRectWidth / 2;
-    
-        // Calculate hitbox constants
-        var widthPercentage = this.hitbox?.widthPercentage || 0.0;
-        var heightPercentage = this.hitbox?.heightPercentage || 0.0;
-    
-        // Calculate hitbox reductions from the width and height
-        const widthReduction = thisRect.width * widthPercentage;
-        const heightReduction = thisRect.height * heightPercentage;
-    
-        // Build hitbox by subtracting reductions from the left, right, top, and bottom
-        const thisLeft = thisRect.left + widthReduction;
-        const thisTop = thisRect.top + heightReduction;
-        const thisRight = thisRect.right - widthReduction;
-        const thisBottom = thisRect.bottom;
-        const tolerance = 10; // Adjust as needed
+    // NPC sprite data (frog)
+    const sprite_src_frog = path + "/images/rpg/fishies.png";
+    const sprite_data_frog = {
+        name: 'npc',
+        src: sprite_src_frog,
+        SCALE_FACTOR: 16,  // Adjust this based on your scaling needs
+        ANIMATION_RATE: 50,
+        pixels: {height: 256, width: 384},
+        INIT_POSITION: { x: (width / 2), y: (height / 2)},
+        orientation: {rows: 8, columns: 12 },
+        down: {row: 0, start: 9, columns: 3 },  // This is the stationary npc, down is default 
+    };
 
-        // Determine hit and touch points of hit
-        this.collisionData = {
-            hit: (
-                thisLeft < otherRect.right &&
-                thisRight > otherRect.left &&
-                thisTop < otherRect.bottom &&
-                thisBottom > otherRect.top
-            ),
-            touchPoints: {
-                this: {
-                    id: this.canvas.id,
-                    top: thisRect.bottom > otherRect.top,
-                    bottom: (thisRect.bottom <= otherRect.top) && !(Math.abs(thisRect.bottom - otherRect.bottom) <= GameEnv.gravity),
-                    left: thisCenterX > otherCenterX,
-                    right: thisCenterX < otherCenterX,
-                    onTopofOther: onTopofOther
-                },
-                other: {
-                    id: other.canvas.id,
-                    top: thisRect.bottom < otherRect.top,
-                    bottom: (thisRect.bottom >= otherRect.top) && !(Math.abs(thisRect.bottom - otherRect.bottom) <= GameEnv.gravity),
-                    left: thisCenterX < otherCenterX, 
-                    right: thisCenterX > otherCenterX,
-                },
-            },
-        };
+    // List of objects defnitions for this level
+    this.objects = [
+      { class: Background, data: image_data_water },
+      { class: PlayerOne, data: sprite_data_turtle },
+      { class: PlayerTwo, data: sprite_data_fish },
+      { class: NpcFrog, data: sprite_data_frog }
+    ];
+  }
 
-    }
-    
 }
 
-export default GameObject;
+export default GameLevelWater;
