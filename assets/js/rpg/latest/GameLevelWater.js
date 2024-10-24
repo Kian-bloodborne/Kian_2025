@@ -25,7 +25,7 @@ class GameLevelWater {
 
     // Player 1 sprite data (turtle)
     const TURTLE_SCALE_FACTOR = 10;
-    const sprite_src_turtle = path + "/images/rpg/Knight.png";
+    const sprite_src_turtle = path + "/images/rpg/Ca.png";
     const sprite_data_turtle = {
         name: 'turtle',
         src: sprite_src_turtle,
