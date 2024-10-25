@@ -588,7 +588,7 @@ n
 g</code></pre>
 
     <h2>Practice Exercise: Print Your Name</h2>
-    <p>Click the button below to print each letter of your name, "Kian":</p>
+    <p>Click the button below to print each letter of your name, "<strong>Kian</strong>":</p>
     <button id="submitBtn">Print My Name</button>
 
     <div id="output"></div>
@@ -619,4 +619,3 @@ g</code></pre>
     </script>
 </body>
 </html>
-
