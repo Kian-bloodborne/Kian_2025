@@ -458,7 +458,6 @@ Try to place a square in every corner.
 </body>
 </html>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -508,30 +507,25 @@ n
 g</code></pre>
 
     <h2>Practice Exercise: Print Your Name</h2>
-    <p>Create a for loop that iterates through your name and prints each letter. Here's an example:</p>
-
-    <pre><code>&lt;script&gt;
-    const name = "YourName";
-    let output = '';
-
-    for (let i = 0; i &lt; name.length; i++) {
-        output += name[i] + '&lt;br&gt;'; // Append each letter with a line break
-    }
-
-    document.getElementById('output').innerHTML = output;
-    &lt;/script&gt;</code></pre>
+    <p>Click the button below to print each letter of your name, "Kian," multiple times:</p>
+    <button id="submitBtn">Print My Name</button>
 
     <div id="output"></div>
 
     <script>
-        const name = "ChatGPT";
-        let output = '';
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const name = "Kian"; // Your name
+            let output = '';
 
-        for (let i = 0; i < name.length; i++) {
-            output += name[i] + '<br>'; // Append each letter with a line break
-        }
+            for (let i = 0; i < name.length; i++) {
+                output += name[i] + '<br>'; // Append each letter with a line break
+            }
 
-        document.getElementById('output').innerHTML = output;
+            // Repeat the name 5 times (you can change this number)
+            output = output.repeat(5);
+
+            document.getElementById('output').innerHTML = output;
+        });
     </script>
 
     <script src="https://utteranc.es/client.js"
