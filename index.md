@@ -538,3 +538,85 @@ g</code></pre>
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loops in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding For Loops</h1>
+    <h2>Overview</h2>
+    <p>For loops can be used to iterate through a list, a range of numbers, or a string. This is particularly useful for accessing each element in these collections.</p>
+
+    <h2>Looping Through a String</h2>
+    <p>Here’s how you can use a for loop to print each letter of a string:</p>
+    <pre><code>for (let letter of "teststring") {
+    console.log(letter);
+}</code></pre>
+    <p>This will output:</p>
+    <pre><code>t
+e
+s
+t
+s
+t
+r
+i
+n
+g</code></pre>
+
+    <h2>Practice Exercise: Print Your Name</h2>
+    <p>Click the button below to print each letter of your name, "Kian":</p>
+    <button id="submitBtn">Print My Name</button>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const name = "Kian"; // Your name
+            let output = '';
+
+            for (let i = 0; i < name.length; i++) {
+                output += name[i] + '<br>'; // Append each letter with a line break
+            }
+
+            // Repeat the output 5 times (you can adjust this number)
+            output = output.repeat(5);
+
+            document.getElementById('output').innerHTML = output;
+        });
+    </script>
+
+    <script src="https://utteranc.es/client.js"
+            repo="nighthawkcoders/portfolio_2025"
+            issue-term="title"
+            label="blogpost-comment"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</body>
+</html>
+
