@@ -19,7 +19,7 @@ class GameLevelDesert {
         name: 'desert',
         greeting: "Welcome to the desert!  It is hot and dry here, but there are many adventures to be had!",
         src: image_src_desert,
-        pixels: {height: 580, width: 1038}
+        pixels: {height: 720, width: 1280}
     };
 
 
@@ -34,10 +34,10 @@ class GameLevelDesert {
         STEP_FACTOR: 1000,
         ANIMATION_RATE: 50,
         INIT_POSITION: { x: 0, y: height - (height/CHILLGUY_SCALE_FACTOR) }, 
-        pixels: {height: 384, width: 512},
+        pixels: {height: 150, width: 337},
         orientation: {rows: 3, columns: 4 },
         down: {row: 0, start: 0, columns: 3 },
-        left: {row: 2, start: 0, columns: 3 },
+        left: {row: 1, start: 1, columns: 3 },
         right: {row: 1, start: 0, columns: 3 },
         up: {row: 3, start: 0, columns: 3 },
         hitbox: { widthPercentage: 0.45, heightPercentage: 0.2 },
