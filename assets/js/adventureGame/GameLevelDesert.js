@@ -19,7 +19,7 @@ class GameLevelDesert {
         name: 'desert',
         greeting: "Welcome to the desert!  It is hot and dry here, but there are many adventures to be had!",
         src: image_src_desert,
-        pixels: {height: 720, width: 1280}
+        pixels: {height: 580, width: 1038}
     };
 
 
@@ -27,19 +27,19 @@ class GameLevelDesert {
     const sprite_src_chillguy = path + "/images/gamify/chillguy.png"; // be sure to include the path
     const CHILLGUY_SCALE_FACTOR = 5;
     const sprite_data_chillguy = {
-        id: 'Chill Guy',
-        greeting: "Hi I am Chill Guy, the desert wanderer. I am looking for wisdome and adventure!",
+        id: 'Ash Ketchum',
+        greeting: "Hi I am Ash Ketchum, I will become the greatest pokemon trainer!",
         src: sprite_src_chillguy,
         SCALE_FACTOR: CHILLGUY_SCALE_FACTOR,
         STEP_FACTOR: 1000,
         ANIMATION_RATE: 50,
         INIT_POSITION: { x: 0, y: height - (height/CHILLGUY_SCALE_FACTOR) }, 
-        pixels: {height: 150, width: 337},
-        orientation: {rows: 3, columns: 4 },
-        down: {row: 0, start: 0, columns: 3 },
-        left: {row: 1, start: 1, columns: 3 },
-        right: {row: 1, start: 0, columns: 3 },
-        up: {row: 3, start: 0, columns: 3 },
+        pixels: {height: 256, width: 256},
+        orientation: {rows: 0, columns: 0 },
+        down: {row: 0, start: 0, columns: 4 },
+        left: {row: 1, start: 0, columns: 4 },
+        right: {row: 2, start: 0, columns: 4 },
+        up: {row: 3, start: 0, columns: 4 },
         hitbox: { widthPercentage: 0.45, heightPercentage: 0.2 },
         keypress: { up: 87, left: 65, down: 83, right: 68 } // W, A, S, D
     };
@@ -53,10 +53,10 @@ class GameLevelDesert {
         src: sprite_src_tux,
         SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
-        pixels: {height: 256, width: 352},
+        pixels: {height: 256, width: 384},
         INIT_POSITION: { x: (width / 2), y: (height / 2)},
-        orientation: {rows: 8, columns: 11 },
-        down: {row: 5, start: 0, columns: 3 },  // This is the stationary npc, down is default 
+        orientation: {rows: 8, columns: 12 },
+        down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         // Linux command quiz
         quiz: { 
@@ -82,14 +82,14 @@ class GameLevelDesert {
       const sprite_src_octocat = path + "/images/gamify/octocat.png"; // be sure to include the path
       const sprite_data_octocat = {
         id: 'Octocat',
-        greeting: "Hi I am Octocat! I am the GitHub code code code collaboration mascot",
+        greeting: "Hi I am Snorlax! Do you have any food I can eat?",
         src: sprite_src_octocat,
         SCALE_FACTOR: 10,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
-        pixels: {height: 301, width: 801},
+        pixels: {height: 256, width: 256},
         INIT_POSITION: { x: (width / 4), y: (height / 4)},
-        orientation: {rows: 1, columns: 4 },
-        down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
+        orientation: {rows: 0, columns: 4 },
+        down: {row: 0, start: 0, columns: 4 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.1 },
         // GitHub command quiz 
         quiz: { 
