@@ -25,7 +25,7 @@ class GameLevelDesert {
 
     // Player data for Chillguy
     const sprite_src_chillguy = path + "/images/gamify/chillguy.png"; // be sure to include the path
-    const CHILLGUY_SCALE_FACTOR = 5;
+    const CHILLGUY_SCALE_FACTOR = 4;
     const sprite_data_chillguy = {
         id: 'Ash Ketchum',
         greeting: "Hi I am Ash Ketchum, I will become the greatest pokemon trainer!",
@@ -35,7 +35,7 @@ class GameLevelDesert {
         ANIMATION_RATE: 50,
         INIT_POSITION: { x: 0, y: height - (height/CHILLGUY_SCALE_FACTOR) }, 
         pixels: {height: 256, width: 256},
-        orientation: {rows: 0, columns: 0 },
+        orientation: {rows: 3, columns: 4 },
         down: {row: 0, start: 0, columns: 4 },
         left: {row: 1, start: 0, columns: 4 },
         right: {row: 2, start: 0, columns: 4 },
@@ -53,10 +53,10 @@ class GameLevelDesert {
         src: sprite_src_tux,
         SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
-        pixels: {height: 256, width: 384},
+        pixels: {height: 256, width: 352},
         INIT_POSITION: { x: (width / 2), y: (height / 2)},
-        orientation: {rows: 8, columns: 12 },
-        down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
+        orientation: {rows: 8, columns: 11 },
+        down: {row: 0, start: 3, columns: 2 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         // Linux command quiz
         quiz: { 
@@ -113,7 +113,7 @@ class GameLevelDesert {
     const sprite_src_robot = path + "/images/gamify/robot.png"; // be sure to include the path
     const sprite_data_robot = {
         id: 'Robot',
-        greeting: "Hi I am Robot, the Jupyter Notebook mascot.  I am very happy to spend some linux shell time with you!",
+        greeting: "Hi I am Doraemon, I scary the rat!",
         src: sprite_src_robot,
         SCALE_FACTOR: 10,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 100,

@@ -52,12 +52,13 @@ class Player extends Character {
                 break;
             case this.keypress.down:
                 this.velocity.y += this.yVelocity;
+
                 this.direction = 'down';
                 break;
             case this.keypress.right:
                 this.velocity.x += this.xVelocity;
+
                 this.direction = 'right';
-                break;
         }
     }
 
