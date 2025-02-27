@@ -168,6 +168,8 @@ class Character extends GameObject {
         // Update or change position according to velocity events
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
+        this.velocity.x *= 0.8;
+        this.velocity.y *= 0.8;
 
         // Ensure the object stays within the canvas boundaries
         // Bottom of the canvas

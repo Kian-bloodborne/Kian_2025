@@ -31,12 +31,12 @@ class GameLevelWater {
         STEP_FACTOR: 1000,
         ANIMATION_RATE: 50,
         INIT_POSITION: { x: 0, y: height - (height/OCTOPUS_SCALE_FACTOR) }, 
-        pixels: {height: 250, width: 167},
-        orientation: {rows: 3, columns: 2 },
-        down: {row: 0, start: 0, columns: 2 },
-        left: {row: 1, start: 0, columns: 2 },
-        right: {row: 1, start: 0, columns: 2 },
-        up: {row: 0, start: 0, columns: 2},
+        pixels: {height: 225, width: 225},
+        orientation: {rows: 0, columns: 4 },
+        down: {row: 0, start: 0, columns: 4 },
+        left: {row: 1, start: 0, columns: 4 },
+        right: {row: 2, start: 0, columns: 4 },
+        up: {row: 3, start: 0, columns: 4},
         hitbox: { widthPercentage: 0.45, heightPercentage: 0.2 },
         keypress: { up: 87, left: 65, down: 83, right: 68 } // W, A, S, D
     };

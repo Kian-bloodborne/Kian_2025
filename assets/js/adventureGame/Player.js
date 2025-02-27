@@ -40,24 +40,46 @@ class Player extends Character {
         addEventListener('keyup', this.handleKeyUp.bind(this));
     }
 
+    // handleKeyDown({ keyCode }) {
+    //     switch (keyCode) {
+    //         case this.keypress.up:
+    //             this.velocity.y -= this.yVelocity;
+    //             this.direction = 'up';
+    //             break;
+    //         case this.keypress.left:
+    //             this.velocity.x -= this.xVelocity;
+    //             this.direction = 'left';
+    //             break;
+    //         case this.keypress.down:
+    //             this.velocity.y += this.yVelocity;
+
+    //             this.direction = 'down';
+    //             break;
+    //         case this.keypress.right:
+    //             this.velocity.x += this.xVelocity;
+
+    //             this.direction = 'right';
+    //     }
+    // }
+
+    
     handleKeyDown({ keyCode }) {
         switch (keyCode) {
             case this.keypress.up:
-                this.velocity.y -= this.yVelocity;
+                this.velocity.y += 5;
                 this.direction = 'up';
                 break;
             case this.keypress.left:
-                this.velocity.x -= this.xVelocity;
+                this.velocity.x -= 5;
+
                 this.direction = 'left';
                 break;
             case this.keypress.down:
-                this.velocity.y += this.yVelocity;
-
+                this.velocity.y -= 5;
                 this.direction = 'down';
                 break;
             case this.keypress.right:
-                this.velocity.x += this.xVelocity;
-
+                this.velocity.x += 5;
                 this.direction = 'right';
         }
     }

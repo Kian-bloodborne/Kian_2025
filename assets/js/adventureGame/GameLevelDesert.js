@@ -35,7 +35,7 @@ class GameLevelDesert {
         ANIMATION_RATE: 50,
         INIT_POSITION: { x: 0, y: height - (height/CHILLGUY_SCALE_FACTOR) }, 
         pixels: {height: 256, width: 256},
-        orientation: {rows: 3, columns: 4 },
+        orientation: {rows: 0, columns: 4 },
         down: {row: 0, start: 0, columns: 4 },
         left: {row: 1, start: 0, columns: 4 },
         right: {row: 2, start: 0, columns: 4 },
@@ -53,10 +53,10 @@ class GameLevelDesert {
         src: sprite_src_tux,
         SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
-        pixels: {height: 256, width: 352},
+        pixels: {height: 218, width: 231},
         INIT_POSITION: { x: (width / 2), y: (height / 2)},
-        orientation: {rows: 8, columns: 11 },
-        down: {row: 0, start: 3, columns: 2 },  // This is the stationary npc, down is default 
+        orientation: {rows: 0, columns: 4 },
+        down: {row: 0, start: 0, columns: 4 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         // Linux command quiz
         quiz: { 
@@ -115,12 +115,12 @@ class GameLevelDesert {
         id: 'Robot',
         greeting: "Hi I am Doraemon, I scary the rat!",
         src: sprite_src_robot,
-        SCALE_FACTOR: 10,  // Adjust this based on your scaling needs
+        SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 100,
-        pixels: {height: 316, width: 627},
+        pixels: {height: 136, width: 208},
         INIT_POSITION: { x: (width * 3 / 4), y: (height * 3 / 4)},
-        orientation: {rows: 3, columns: 6 },
-        down: {row: 1, start: 0, columns: 6 },  // This is the stationary npc, down is default 
+        orientation: {rows: 3, columns: 3 },
+        down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         // Linux command quiz
         quiz: { 
