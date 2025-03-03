@@ -35,7 +35,7 @@ class GameLevelDesert {
         ANIMATION_RATE: 50,
         INIT_POSITION: { x: 0, y: height - (height/CHILLGUY_SCALE_FACTOR) }, 
         pixels: {height: 256, width: 256},
-        orientation: {rows: 3, columns: 4 },
+        orientation: {rows: 4, columns: 4 },
         down: {row: 0, start: 0, columns: 4 },
         left: {row: 1, start: 0, columns: 4 },
         right: {row: 2, start: 0, columns: 4 },
@@ -55,8 +55,8 @@ class GameLevelDesert {
         ANIMATION_RATE: 50,
         pixels: {height: 218, width: 231},
         INIT_POSITION: { x: (width / 2), y: (height / 2)},
-        orientation: {rows: 0, columns: 4 },
-        down: {row: 0, start: 0, columns: 4 },  // This is the stationary npc, down is default 
+        orientation: {rows: 4, columns: 4 },
+        down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         // Linux command quiz
         quiz: { 
@@ -88,7 +88,7 @@ class GameLevelDesert {
         ANIMATION_RATE: 50,
         pixels: {height: 225, width: 225},
         INIT_POSITION: { x: (width / 4), y: (height / 4)},
-        orientation: {rows: 0, columns: 4 },
+        orientation: {rows: 4, columns: 4 },
         down: {row: 0, start: 0, columns: 4 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.1 },
         // GitHub command quiz 
@@ -119,8 +119,8 @@ class GameLevelDesert {
         ANIMATION_RATE: 100,
         pixels: {height: 136, width: 208},
         INIT_POSITION: { x: (width * 3 / 4), y: (height * 3 / 4)},
-        orientation: {rows: 3, columns: 3 },
-        down: {row: 0, start: 0, columns: 1 },  // This is the stationary npc, down is default 
+        orientation: {rows: 4, columns: 4 },
+        down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         // Linux command quiz
         quiz: { 
