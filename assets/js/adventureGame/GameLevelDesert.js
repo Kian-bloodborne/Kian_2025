@@ -49,7 +49,7 @@ class GameLevelDesert {
     const sprite_src_tux = path + "/images/gamify/tux.png"; // be sure to include the path
     const sprite_data_tux = {
         id: 'Tux',
-        greeting: "Hi I am Tux, the Linux mascot.  I am very happy to spend some linux shell time with you!",
+        greeting: "Hi I am Cynthia, the pokemon contest champion let's fight!",
         src: sprite_src_tux,
         SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
@@ -117,10 +117,10 @@ class GameLevelDesert {
         src: sprite_src_robot,
         SCALE_FACTOR: 8,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 100,
-        pixels: {height: 136, width: 208},
-        INIT_POSITION: { x: (width * 3 / 4), y: (height * 3 / 4)},
+        pixels: {height: 225, width: 225},
+        INIT_POSITION: { x: (width *  3 / 4), y: (height * 3 / 4)},
         orientation: {rows: 4, columns: 4 },
-        down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
+        down: {row: 0, start: 0, columns: 4 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         // Linux command quiz
         quiz: { 
